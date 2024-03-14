@@ -27,6 +27,8 @@ class ProcessEluterWebhooksData implements ShouldQueue
                 "timestamp_server" => $arrayData['timestamp']
             ]
         );
+
+        Log::info("Data recive: ".json_encode($request->getContent()));
         
         return response()->json(['message' => 'Webhook received and processing']);
     }
