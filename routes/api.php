@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Jobs\Webhooks\ProcessEluterWebhooksData;
+use App\Http\Controllers\EluterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,7 @@ use App\Jobs\Webhooks\ProcessEluterWebhooksData;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/push/eluter/actions/{id}', [EluterController::class, 'pushEluterActions']);
 
 Route::post('/webhooks/eluter', [ProcessEluterWebhooksData::class, 'handle']);
