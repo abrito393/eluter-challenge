@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('remote-actions', function (Blueprint $table) {
             $table->id();
+            $table->string('uuid')->nullable();
             $table->string('value')->nullable();
             $table->string('status')->nullable();
             $table->bigInteger('timestamp_server')->nullable();
