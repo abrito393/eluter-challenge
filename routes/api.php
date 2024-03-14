@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Jobs\Webhooks\ProcessEluterWebhooksData;
+use App\Http\Controllers\Webhooks\ProcessEluterWebhooksData;
 use App\Http\Controllers\EluterController;
 
 /*

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs\Webhooks;
+namespace App\Http\Controllers\Webhooks;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
